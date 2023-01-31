@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cv de Kristin</title>
+    <link rel="stylesheet" type="text/css" href="css/estilos.css" />
+
+    <!--lo siguiente es favicon data-->
+    <link rel="icon" type="image/png" href="/favicon16x16.png" sizes="16x16">
+    <link rel="icon" type="image/png" href="/favicon32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="/favicon96x96.png" sizes="96x96">
+
+    <!--contiene elementos necessarios para aplicar los íconos de fontawesome y parte de la biblioteca web responsibe de bootstrap para css-->
+    <script src="https://kit.fontawesome.com/41830838fa.js" crossorigin="anonymous"> 
+    </script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+
+
+    <link rel="preconnect" href="https://fonts.googleapis.com"> <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+    <!--esto es parte de la libreria de bootstrap para web responsive de js-->
+    <script> 
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"; integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"; crossorigin="anonymous"
+
+        function bigImg(x) {
+            x.style.height = "230px";
+            x.style.width = "230px";
+        }
+        
+        function normalImg(x) {
+            x.style.height = "200px";
+            x.style.width = "200px";
+        }
+
+        function getRndInteger(min, max) {
+            return Math.floor(Math.random() * (max - min)) + min;
+        }
+
+    </script>
+    <header>
+            <h1> Cv de Kristin Graham </h1>
+            <img src="https://randomuser.me/api/portraits/women/23.jpg" alt="fotodeKristin" class="center" width="200" height="200" onmouseover="bigImg(this)" onmouseout="normalImg(this)">
+    </header>    
+
+    <aside>
+        <h4> Información personal</h4>
+        <p> Tel.: 123456789 </p>
+        <p> Email: lorem@ipsum.com</p>
+        <p>Objetivo: Trabajar en una empresa donde pueda aplicar mis conocimiento y me desafíe profesionalmente</p>
+    </aside>
+
+    <div id="skills">
+        <h2> 
+            <!-- &nbscp es 1 (un) espacio -->
+            <i class="fa-solid fa-wrench">&nbsp</i>Habilidades 
+        </h2>
+        <br>
+        <ul>
+            <li> Edición de sonido </li>
+            <li> Edición de video
+                <ul>
+                    <li> Da Vinci Resolve</li>
+                    <li> Adobe Premiere</li>
+                </ul>
+            </li>
+            <li> <a href="https://www.nois7.com/">  Fotografía </a> </li>
+        </ul>
+    </div>
+
+    <section id="experiencia">
+        <h2>
+            <i class="fa-solid fa-building-columns">&nbsp</i>Experiencia:
+        </h2>
+        <p> 
+            2000 - 2010 Fotógrafa - Teatro Di Tella 
+        </p>
+        <p>
+            2010 - Actualidad Responsable Depto Audiovisual - Instituto Lapla
+        </p>
+        <p>
+            2005 - 2020 Númeróloga y astróloga - Instituto Alternativo de Tafí 
+        </p>
+    </section>
+
+    <section>
+        <h2>
+            <i class="fa-solid fa-video"></i> &nbsp</i> Último trabajo:
+        </h2>
+        <!-- Al final del link del video se puede agregar ?controls=0 para remover los controles de la web. También luego de "autoplay" agregar "modestbranding;" quita elementos de logotipo -->
+        <iframe width="100%" height="100%" src="https://www.youtube.com/embed/HXAc103nB8g?controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; modestbranding, clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"></iframe>
+    </section>
+
+    <section id="special">
+        <h2>
+            <i class="fa-solid fa-dice"></i>&nbsp</i>¿Quiere saber sus números de la suerte?
+        </h2>
+        <button type="button" id="randomize" onclick="document.getElementById('resultado').innerHTML = getRndInteger(0,1000)"> Si </button>
+        <p id="resultado"></p>
+
+    </section>
+
+    <footer>
+        <p>
+            San Carlos de Bariloche, 2023
+        </p>
+    </footer>
+</body>
+</html>
